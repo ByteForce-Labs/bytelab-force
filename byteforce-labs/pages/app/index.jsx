@@ -2,9 +2,9 @@ import React from 'react'
 
 const Index = () => {
   return (
-    <div>
-      
-    </div>
+    <main className=" bg-[#000] h-[100vh]">
+
+    </main>
   )
 }
 
