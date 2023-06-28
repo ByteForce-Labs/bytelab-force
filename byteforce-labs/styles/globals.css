@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Space+Grotesk:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.main-bg {
+  background-image: url(/Images/byteforce-bg.jpg);
+  background-position: center;
+  background-size: contain;
+}
