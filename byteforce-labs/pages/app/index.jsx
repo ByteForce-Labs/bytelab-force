@@ -6,12 +6,16 @@ const Index = () => {
     <main className="main-bg bg-[#000] h-[100vh]">
         <Parallax pages={4}>
             <ParallaxLayer 
-                speed={-1}
                 offset={0}
+                sticky={{
+                    start: 0,
+                    end: 1
+                }}
                 style={{
                     backgroundImage: `url(/Images/hero.svg)`,
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
+                    zIndex: "-1"
                 }}>
             </ParallaxLayer>
             <ParallaxLayer 
