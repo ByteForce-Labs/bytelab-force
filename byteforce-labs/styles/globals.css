@@ -9,3 +9,11 @@
   background-position: center;
   background-size: contain;
 }
+header {
+  transition: .5s;
+}
+.header-sticky {
+  transition: .5s;
+  background-color: white;
+  padding-block: 1rem;
+}
