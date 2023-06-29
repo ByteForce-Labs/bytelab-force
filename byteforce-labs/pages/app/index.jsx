@@ -2,6 +2,9 @@ import React, { useRef, useEffect } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Image from 'next/image'
 import Layout from '@/layout/Layout'
+import MainLayout from '@/layout/MainLayout'
+import Footer from '@/layout/Footer'
+import HeadComp from '@/layout/Head'
 
 const Index = () => {
     const header = useRef()
@@ -13,11 +16,18 @@ const Index = () => {
         })
     }, [])
   return (
-    <main className="main-bg bg-[#000] h-[100vh]">
-        <Parallax 
-            ref={parallaxRef} 
-            pages={5}>
-            <Layout header={header}>
+    <>
+        <HeadComp title="Byteforce Labs - Home"/>
+        <main className="main-bg bg-[#000] h-[100vh]">
+            <Parallax 
+                ref={parallaxRef} 
+                pages={5}>
+                <ParallaxLayer 
+                    className=""
+                    sticky={{start:0, end: 4}}
+                >
+                    <MainLayout header={header}/>
+                </ParallaxLayer>
                 <ParallaxLayer 
                     offset={0}
                     sticky={{
@@ -35,7 +45,7 @@ const Index = () => {
                     speed={-2}
                     offset={0} 
                     className="flex items-center justify-center">
-                    <h2 className=" font-poppins text-[3rem] text-black">Web3 Builder</h2>
+                    <h2 className="wow bounceInDown font-poppins text-[3rem] text-black">Web3 Builder</h2>
                 </ParallaxLayer>
                 <ParallaxLayer
                     className="curved-bottom"
@@ -91,10 +101,19 @@ const Index = () => {
                         </div>
                     </div>
                 </ParallaxLayer>
-            </Layout>
-        </Parallax>
+                <ParallaxLayer
+                    offset={4}
+                    className="bg-white"
+                >
+                    <p className="w-[60%] mx-auto font-spaceGrotesk text-[1.6rem] font-[600] mt-[15%]">
+                        At Byteforce Labs , we pride ourselves on our ability to deliver projects on time and within budget. We believe in transparency and open communication, which is why we keep our clients informed throughout the entire development process. Contact us today to learn how we can help your business succeed online.
+                    </p>
+                </ParallaxLayer>
+                <Footer />
+            </Parallax>
 
-    </main>
+        </main>
+    </>
   )
 }
 
