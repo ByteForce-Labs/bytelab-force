@@ -19,15 +19,10 @@ const Index = () => {
     <>
         <HeadComp title="Byteforce Labs - Home"/>
         <main className="main-bg bg-[#000] h-[100vh]">
+            <MainLayout header={header}/>
             <Parallax 
                 ref={parallaxRef} 
                 pages={5}>
-                <ParallaxLayer 
-                    className=""
-                    sticky={{start:0, end: 4}}
-                >
-                    <MainLayout header={header}/>
-                </ParallaxLayer>
                 <ParallaxLayer 
                     offset={0}
                     sticky={{
