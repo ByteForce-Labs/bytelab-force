@@ -41,3 +41,7 @@ header {
   transform: scaleX(2);
   z-index: -1;
 }
+.full-data p {
+  position: static;
+  transform: translateY(0);
+}
