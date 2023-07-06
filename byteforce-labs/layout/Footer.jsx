@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#263238] p-[6rem]">
+    <footer className="absolute bottom-0 bg-[#263238] p-[6rem]">
       <section className="flex  justify-between">
         <div className="w-[35%]">
           <h2 className=" font-poppins text-white font-bold mb-[2rem]">Byteforce Labs</h2>

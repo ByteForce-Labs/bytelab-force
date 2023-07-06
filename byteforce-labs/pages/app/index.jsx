@@ -50,7 +50,7 @@ const Index = () => {
   return (
     <>
         <HeadComp title="Byteforce Labs - Home"/>
-        <main className="main-bg bg-[#000] h-[100vh]">
+        <main className="main-bg bg-[#000] ">
             <MainLayout header={header}/>
             <Parallax 
                 ref={parallaxRef} 
@@ -140,15 +140,15 @@ const Index = () => {
                     offset={5}
                     className="bg-white"
                 >
-                    <section className="h-fit bg-white pb-5">
-                        <div className="mx-auto w-[80%]">
+                    <section className=" bg-white pb-5">
+                        <div className="mx-auto h-[60rem] w-[83%] p-[2rem] overflow-y-auto">
                             <h3 className="font-EuclidCircularA text-black text-3xl font-[500] mb-[2rem]">
                                 FAQ
                             </h3>
                             <div className="w-[90%] md:w-full mx-auto text-black p-[1rem] md:p-[0] rounded-[8px] space-y-[2rem]">
                                 <div
                                     ref={One}
-                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-md p-2 mx-auto space-y-[1rem]"
+                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-lg p-2 mx-auto space-y-[1rem]"
                                 >
                                     <div className=" flex justify-between items-center border-b-2">
                                         <h3 className="font-EuclidCircularA font-bold my-2">Why Choose Byte Force?</h3>
@@ -168,7 +168,7 @@ const Index = () => {
                                 </div>
                                 <div
                                     ref={Two}
-                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-md p-2 mx-auto space-y-[1rem]"
+                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-lg p-2 mx-auto space-y-[1rem]"
                                 >
                                     <div className=" flex justify-between items-center border-b-2">
                                         <h3 className="font-EuclidCircularA font-bold my-2">How We Can Help You</h3>
@@ -188,9 +188,9 @@ const Index = () => {
                                 </div>
                                 <div
                                     ref={Three}
-                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-md p-2 mx-auto space-y-[1rem]"
+                                    className=" overflow-hidden relative border-[1px] rounded-[5px] shadow-lg p-2 mx-auto space-y-[1rem]"
                                 >
-                                    <div className=" flex justify-between items-center">
+                                    <div className=" flex justify-between items-center border-b-2">
                                         <h3 className="font-EuclidCircularA font-bold my-2">Join the Byte Force Revolution:</h3>
                                         <button
                                             onClick={() => dispatch({ type: "IconThree" }, revealData(Three))}
@@ -211,13 +211,10 @@ const Index = () => {
                 </ParallaxLayer>
                 <ParallaxLayer
                     offset={6}
-                    className= ""
-                    sticky={{
-                        start: 6.9, 
-                        end: 6.9
-                    }}
+                    className= "text-white z-[-1]"
                 >
                     <Footer />
+                    
                 </ParallaxLayer>
             </Parallax>
 
